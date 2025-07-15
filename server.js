@@ -107,7 +107,7 @@ io.on("connection", (socket) => {
 });
 
 mongoose
-  .connect("mongodb://localhost:27017/qurioDB")
+  .connect(process.env.MONGO_URI_SERVER)
   .then(() => console.log("database connected"));
 
 app.get("/", (req, res) => {
